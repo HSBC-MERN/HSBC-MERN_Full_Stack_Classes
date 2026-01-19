@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1::after {
+        font-size: 50px;
+        color: mediumblue;
+        content: " Every One";
+      }
+
+      h1::before{
+        content: "Hi ";
+        color: brown;
+        font-size: 50px;
+      }
+
+      label::before{
+        content: "Your ";
+      }
+
+
+      label{
+        font-weight: bold;
+        font-style: italic;
+      }
+      label::after{
+        content: "*";
+        color: red;
+      }
+
+
+      h2{
+        text-align: center;
+      }
+      span{
+        color: red;
+        background-color: burlywood;
+        font-size: 10px;
+      }
+
+      h2::first-letter{
+        color: purple;
+        font-size: 50px;
+        font-style: italic;
+      }
+
+      p::first-line{
+        color: rgb(255, 4, 0);
+        font-style: italic;
+        font-size: 25px;
+        background-color: lightblue;
+      }
+
+      li::marker{
+        content: "👉";
+      }
+
+
+      li::selection{
+        color: red;
+        background-color: palegoldenrod;
+      }
+      p::selection{
+        
+        color: goldenrod;
+        background-color: powderblue;
+      }
+
+      input{
+        font-size: 20px;
+        color: magenta;
+      }
+      input::placeholder{
+        color: red;
+        font-weight: bold;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <input type="text" placeholder="Enter Any Text">
+
+
+    <h2> Hello World...Welcome me to the <span>Programming</span> World </h2>
+    <h1>HELLO</h1>
+
+
+    <ol>
+        <li>List-items-1</li>
+        <li>List-items-2</li>
+        <li>List-items-3</li>
+        <li>List-items-4</li>
+        <li>List-items-5</li>
+    </ol>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus
+      soluta possimus repudiandae amet ratione nostrum eligendi explicabo. Sequi
+      unde dicta in, perspiciatis doloribus nulla exercitationem explicabo error
+      ullam natus.
+    </p>
+
+    <form action="">
+      <fieldset>
+        <h2>Sign-In</h2>
+        <label for="">username  </label>
+        <input type="text" placeholder="Enter Username" />
+        <br /><br />
+        <label for="">Password </label>
+        <input type="password" placeholder="Enter Password" />
+        <br /><br />
+        <button type="submit">Sign-In</button>
+        <button type="reset">Cancel</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

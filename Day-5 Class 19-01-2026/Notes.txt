@@ -1,0 +1,9 @@
+Color Values: 
+--------------
+    1. color name
+    2. rgb(red, green , blue)    ->0-255
+    3. rgba(red, green, blue, alpha)   -> 0-255     alpha -> 0-1 
+    4. hsl(hue , saturation , lightless)  ->hue ->0- 360 deg    s, l-> 0% - 100%
+    5. hsla(hue , saturation , lightless, alpha)  ->hue ->0- 360 deg    s, l-> 0% - 100%
+    6. hexa-code number->0 -9 alp ->a, f
+    7. transparent

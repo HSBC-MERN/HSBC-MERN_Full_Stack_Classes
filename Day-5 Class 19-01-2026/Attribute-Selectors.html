@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img[alt="image2"]{
+            height: 100px;
+            width: 100px;
+        }
+
+
+        /* [attribute|='value'] 
+        Is Used to target HTML Element who's attribute value matched before - */
+        h1[id|='heading']{
+            background-color: aquamarine;
+            color: purple;
+        }
+
+
+           /* [id*='e'] 
+        Is Used to target HTML Element who's attribute id having letter "e" */
+        h1[id*='e']{
+            background-color: chartreuse;
+            color: red;
+        }
+
+
+        h1[id^='h']{
+            color: magenta;
+        }
+
+
+        li[class^='i']{
+            color: blue;
+            font-size: 25px;
+        }
+
+
+        li[class~='items']{
+            color: green;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <ol>
+        <li class="list items">Some Content</li>
+        <li class="ist items">Some Content</li>
+        <li class="ist-items">Some Content</li>
+        <li class="list-items">Some Content</li>
+        <li class="list-items">Some Content</li>
+    </ol>
+    
+    <h1 id="heading-one">heading-1</h1>
+    <h1 id="h two">heading-2</h1>
+    <h1 id="hello ">heading-3</h1>
+    <h1 id="heading-3">heading-4</h1>
+    <h1 id="hi">heading-5</h1>
+    <h1 id="head-6">heading-6</h1>
+
+
+    <img src="https://img.freepik.com/free-photo/beautiful-lake-mountains_395237-44.jpg?semt=ais_hybrid&w=740&q=80" alt="image1">
+    <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_640.jpg" alt="image2">
+</body>
+</html>

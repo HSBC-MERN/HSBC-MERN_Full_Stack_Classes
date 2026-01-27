@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: brown;
+      }
+      fieldset {
+        margin: 30px;
+        border-radius: 50px;
+        padding: 30px;
+        background-image: linear-gradient(
+          30deg,
+          powderblue,
+          goldenrod,
+          transparent
+        );
+        border: none;
+        box-shadow: 3px 3px 3px black;
+      }
+
+      label[for="name"] {
+        font-weight: bold;
+        font-style: italic;
+        color: red;
+      }
+      label[for="email"] {
+        font-weight: bold;
+        font-style: italic;
+        color: magenta;
+      }
+
+      label::after {
+        content: "* ";
+        color: red;
+      }
+      button {
+        padding: 10px 20px;
+        font-family: monospace;
+        font-weight: bold;
+        background-color: cadetblue;
+        border-radius: 10px;
+        color: aliceblue;
+        border: none;
+        margin: 10px;
+        text-shadow: 3px 3px 3px black;
+      }
+      button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: rgb(52, 98, 99);
+        border-radius: 10px;
+        color: aliceblue;
+        border: none;
+        text-shadow: 3px 3px 3px black;
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div>
+      
+    </div>
+    <form action="">
+      <fieldset>
+        <h1>Register Form</h1>
+        <label for="name">Name </label>
+        <input type="text" id="name" placeholder="Enter name" /> <br /><br />
+        <label for="psw">Password </label>
+        <input type="password" id="password" placeholder="Enter Password" />
+        <br /><br />
+        <label for="email">Email </label>
+        <input type="email" id="email" placeholder="Enter Email" />
+        <br /><br />
+        <label for="doj">Date Of Join </label>
+        <input type="date" id="DOJ" placeholder="Enter Email" /> <br /><br />
+
+        <button id="btn" type="submit">Register</button>
+        <button type="reset">Cancel</button>
+      </fieldset>
+    </form>
+
+    <script>
+      let name = document.getElementById("name");
+      let psw = document.getElementById("password");
+      let email = document.getElementById("email");
+      let doj = document.getElementById("DOJ");
+      let btn = document.getElementById("btn");
+
+      let container = document.querySelector("div");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("Name:", name.value);
+        console.log("Email:", email.value);
+        console.log("Password:", psw.value);
+        console.log("DOJ:", doj.value);
+
+        localStorage.setItem("Name", name.value);
+        localStorage.setItem("Email", email.value);
+        localStorage.setItem("Password", psw.value);
+        localStorage.setItem("DOJ", doj.value);
+
+        let heading = document.createElement("h2");
+
+        heading.textContent = `Welcome  ${name.value}`;
+        container.appendChild(heading);
+
+        name.value = "";
+        psw.value = "";
+        email.value = "";
+        doj.value = "";
+      });
+    </script>
+  </body>
+</html>

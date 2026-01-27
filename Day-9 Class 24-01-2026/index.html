@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        ProductId: "P100",
+        Name: "Laptop",
+        price: 95000,
+        ratings: "⭐⭐⭐⭐⭐",
+      };
+
+      Object.freeze(obj);
+
+      obj.ProductId = "P200";
+      delete obj.Name;
+      obj.orderId = "OD100";
+
+      console.log(Object.isFrozen(obj));
+      console.log(obj);
+
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+      }
+
+      console.log("-------------------------");
+
+      let num = 12345;
+
+      let sum = 0;
+
+      while (num != 0) {
+        let rem = Math.floor(num % 10);
+        console.log(rem);
+        sum += rem;
+        num = Math.floor(num / 10);
+      }
+
+      console.log("Sum of Digits in Num variables: ", sum);
+
+      let arr = [10, "java", "script", true];
+
+      let str = "Language";
+
+      //for-Of Loop
+      for (val of str) {
+        console.log(val);
+      }
+
+      //for-in loop
+      for (ind in str) {
+        console.log(ind);
+      }
+
+      //for-each loop
+
+      arr.forEach((val, ind, array) => {
+        console.log(val, "-> ", ind, " -> ", array);
+      });
+
+      //map() Function
+
+      let productPrices = [500, 900, 7000, 5000, 4000, 580];
+
+      console.log(productPrices);
+
+      let UpdatedProductPrices = productPrices.map((val) => {
+        return val + 200;
+      });
+      console.log(UpdatedProductPrices);
+
+      let filteredProductPrices = UpdatedProductPrices.filter((val) => {
+        return val >= 1000 && val <= 5000;
+      });
+
+      console.log(filteredProductPrices);
+
+      //[1100 ,42000]
+
+      let totalPrice = filteredProductPrices.reduce((val, acc) => {
+        return val + acc;
+      }, 500);
+
+      console.log(totalPrice);
+
+      let javascriptObj = {
+        name: "Taj",
+        role: "developer",
+        salary: 50000,
+      };
+
+      console.log(JSON.stringify(javascriptObj));
+
+
+      let jsonData=`{"name":"ravi","role":"developer"}`
+      console.log(JSON.parse(jsonData));
+      
+
+
+    //   setInterval(()=>{
+    //     console.log("Hello");
+    //     console.log("Every one");
+    //   },5000)
+
+
+
+    function addition(){
+        console.log(10+20);
+        
+    }
+      setTimeout(()=>{
+        addition()
+        console.log("set time Out Function");
+      },6000)
+
+
+
+
+
+
+      alert("Alert Please check Your name")
+      
+      let arr1=[10,20,30,40]
+      window.console.table(arr1)
+      window.console.error("Error Statement")
+      window.console.warn("Warning  Statement")
+      window.console.info("Information  Statement")
+
+
+      console.log(confirm("Conform Statement "));
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+   
+    </style>
+  </head>
+  <body>
+    <div>
+        <div id="container">
+
+        </div>
+    </div>
+
+    <script>
+      let container = document.querySelector("#container");
+      fetch("https://api.github.com/users")
+        .then((res) => res.json())
+        .then((users) => {
+          users.forEach((user) => {
+            let image = document.createElement("img");
+
+
+            let loginElement=document.createElement("h3")
+            let subContainer=document.createElement("div")
+            image.src=user.avatar_url
+           image.height=100
+           image.width=100
+           image.style.borderRadius="20px"
+           image.style.boxShadow="5px 5px 5px white"
+
+           loginElement.innerText=`Login  name :${user.login}`  
+           loginElement.style.fontStyle="italic"
+           loginElement.style.color="white"
+
+            subContainer.style.margin="10px"
+            subContainer.style.backgroundColor="gray"
+            subContainer.style.borderRadius="10px"
+            subContainer.style.padding="10px"
+            subContainer.style.display="flex"
+            subContainer.style.justifyContent="space-evenly"
+           container.appendChild(subContainer)
+
+            subContainer.appendChild(image)
+            subContainer.appendChild(loginElement)
+            console.log(user.avatar_url);
+          });
+        })
+        .catch((err) => {
+          console.log("Error fetch Api data", err);
+        });
+    </script>
+  </body>
+</html>

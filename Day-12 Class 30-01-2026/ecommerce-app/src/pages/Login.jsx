@@ -30,7 +30,7 @@ export const Login = () => {
             type="text"
             id="username"
             name="username"
-            placeholder="Enter Username"
+            placeholder="Enter email"
             required
             onChange={handleChange}
             value={loginDetails.username}
